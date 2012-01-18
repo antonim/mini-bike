@@ -1,0 +1,11 @@
+User-agent: Yandex
+Disallow: 
+Host: mini-bike.com.ua
+
+User-agent: Googlebot
+Disallow: 
+
+User-agent: *
+Disallow: 
+
+Sitemap: http://mini-bike.com.ua/sitemap.xml

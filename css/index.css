@@ -1,0 +1,307 @@
+html {height:100%;}
+
+body {
+    background:#CCCCCC;
+    min-height:100%;cat_products_table
+    position:relative;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.page {
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    min-height: 100%;
+    width: 1000px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mask {
+    display: none;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    left: 0;
+    top: 0;
+}
+
+.a {
+    cursor: pointer;
+}
+
+.sup {
+    font-size:80%;
+    position:relative;
+    top:-4px
+}
+
+.mainHeader {
+    color: #666666;
+    margin-left: auto;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    cursor: pointer;
+}
+
+.paginator {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0px;
+    padding-bottom: 60px;
+    clear: both;
+}
+
+.paginator span {
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+    margin: 3px;
+}
+
+.paginator a {
+    font-size: 14px;
+    margin: 3px;
+}
+
+.prev {
+    padding: 20px;
+}
+
+.next {
+    padding: 20px;
+}
+
+.last {
+    border-bottom: 0 none !important;
+    border-right: 0 none !important;
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
+}
+
+.cont {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #006699;
+    cursor: pointer;
+}
+
+.cat_products_table {
+    border-collapse: collapse;
+    float: right;
+    margin-left: 0;
+    margin-right: 30px;
+    position: relative;
+    width: 720px;
+}
+
+.cat_products_table td.main h2 {
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+td.main p {
+    color: #666666;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.cat_products_table td {
+    border-top: 1px dotted #A1A1A1;
+    color: #000000;
+    font-size: 12px;
+    padding: 6px 0;
+}
+
+
+td.ill {
+    text-align: center;
+    width: 130px;
+	margin-top:auto;
+}
+
+.filters {
+  border: 1px solid #CCCCCC;
+  margin: 0 20px 0 20px;
+  padding-bottom: 15px;
+}
+
+.filters h3 {
+    text-align: center;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.filters h4 {
+    margin: 5px 5px 0px 15px;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.filters p {
+    margin-left: 15px;
+    font-family: Tahoma;
+    margin-top: 1px;
+    font-size: 12px;
+}
+
+.nameCategoryFilter {
+	background-color: #CCCCCC;
+}
+
+.op {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border-right: 1px dashed #CCCCCC;
+    padding: 7px 10px 8px 20px;
+    width: 40%;
+}
+
+.tx_full {
+    cellspacing: 0;
+    font-size: 14px;
+    clear: both;
+    margin: 0 auto;
+    width: 90%;	
+}
+
+.tx_full td {
+    border-bottom: 1px solid #CCCCCC;
+    padding: 6px 0 6px 20px;
+}
+
+.tx_full th {
+    border-bottom: 1px solid #CCCCCC;
+    padding: 6px 0;
+}
+
+.photo {
+    text-align: center;
+
+}
+
+.driver {
+    margin-left: 50px;
+}
+
+/*
+.catalog {
+    padding-bottom: 60px;
+}
+*/
+
+.contentPage {
+    padding-bottom: 60px;
+}
+
+.line {
+    margin: 50px;
+    border: 1px solid #CCCCCC;
+}
+
+#footer {
+    color: #808080;
+    font: 11px/50px "Verdana";
+    margin: -50px auto;
+    position: relative;
+    text-align: center;
+    width: 891px;
+    z-index: 2;
+}
+
+#comments {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#comments .name {
+    float: left;
+}
+
+
+#comments .date{
+    float: right;
+}
+
+#comments .userName {
+    font-family: Arial;
+    font-size: 15px;
+    color: #808080;
+}
+
+#comments .userComment {
+    font-family: Arial;
+    font-size: 13px;
+}
+
+/*
+#comments .headerComment {
+    background-color: #CCCCCC;
+}*/
+
+
+#comments .small{
+    font-family: Arial;
+    font-size: 11px;
+    color: #808080;
+}
+
+
+#comments p{
+    margin-top: 10px;
+}
+
+
+.thickLine {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.comment {
+    margin-top: 20px;
+}
+
+
+.addCommentForm textarea {
+    width: 400px;
+}
+
+.addCommentForm {
+    display: none;
+}
+
+.search {
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    position:relative;
+    top:-3px;
+}
+
+.searchButton {
+    width: 80px;
+}
+
+.searchString {
+    width: 537px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.error{
+    color: red;
+}

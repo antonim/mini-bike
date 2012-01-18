@@ -1,0 +1,6 @@
+AddDefaultCharset utf-8
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.mini-bike\.com.ua$ [NC]
+RewriteRule ^(.*)$ http://mini-bike.com.ua/$1 [R=301,L]
