@@ -253,36 +253,36 @@ $(document).ready(function() {
     });
 
 
-    $('.next').live('click', function() {
-        var page = $('.paginator span').html();
-        var nextPage = false;
-        $('.paginator').find('a').each(function(index, el) {
-            if ($(el).text() * 1){
-                if (page * 1 < $(el).text() * 1) {
-                    nextPage = true;
-                }
-            }
-        });
-        if (nextPage) {
-            getDataFromFilter(page * 1 + 1);
-        }
-    });
-
-
-    $('.prev').live('click', function() {
-        var page = $('.paginator span').html();
-        var nextPage = false;
-        $('.paginator').find('a').each(function(index, el) {
-            if ($(el).text() * 1) {
-                if (page * 1 > $(el).text() * 1) {
-                    nextPage = true;
-                }
-            }
-        });
-        if (nextPage) {
-            getDataFromFilter(page * 1 - 1);
-        }
-    });
+//    $('.next').live('click', function() {
+//        var page = $('.paginator span').html();
+//        var nextPage = false;
+//        $('.paginator').find('a').each(function(index, el) {
+//            if ($(el).text() * 1){
+//                if (page * 1 < $(el).text() * 1) {
+//                    nextPage = true;
+//                }
+//            }
+//        });
+//        if (nextPage) {
+//            getDataFromFilter(page * 1 + 1);
+//        }
+//    });
+//
+//
+//    $('.prev').live('click', function() {
+//        var page = $('.paginator span').html();
+//        var nextPage = false;
+//        $('.paginator').find('a').each(function(index, el) {
+//            if ($(el).text() * 1) {
+//                if (page * 1 > $(el).text() * 1) {
+//                    nextPage = true;
+//                }
+//            }
+//        });
+//        if (nextPage) {
+//            getDataFromFilter(page * 1 - 1);
+//        }
+//    });
 
     $(".addComment").click(function(){
         $(".addCommentForm").slideToggle();
