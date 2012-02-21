@@ -19,6 +19,8 @@ class Content
         'fuelConsumption'           => 'Расход топлива',
         'transmissionType'          => 'Тип трансмиссии',
         'brakeType'                 => 'Тип тормозов',
+        'brakeTypeFront'            => 'Тип переднего тормоза',
+        'brakeTypeRear'             => 'Тип заднего тормоза',
         'weight'                    => 'Масса',
         'frontWheelSize'            => 'Размер переднего колеса',
         'rearWheelSize'             => 'Размер заднего колеса',
@@ -44,12 +46,19 @@ class Content
                     <?php
                         $i = 0;
                         foreach($catalogList as $item) {
-
-                            $i++;
+                            
+                        if (file_exists('../img/prev/' . $item['photoId'] . '.jpg')) {
+                            $itemImage = 'img/prev/' . $item['photoId'] . '.jpg';
+                        } else {
+                            $itemImage = 'img/noimage_small.jpg';
+                        }
+                        $i++;
                     ?>
                     <tr>
 
-                        <td class="ill"><!--<a href="page.php?modelId=<?php echo $item['id']?>">--><img class = "a" onclick='window.location.href = "page.php?modelId=" + <?php echo $item['id']?>' alt="<?php echo $item['brand'] . ' ' . $item['model']?>" src="img/prev/<?php echo $item['photoId']?>.jpg"/></td>
+                        <td class="ill">
+                            <img class = "a" onclick='window.location.href = "page.php?modelId=" + <?php echo $item['id']?>' alt="<?php echo $item['brand'] . ' ' . $item['model']?>" src="<?=$itemImage?>"/>
+                        </td>
                         <td class="main"><h2><a href="page.php?modelId=<?php echo $item['id']?>"><?php
                             echo $item['brand'] . ' ' . $item['model']
                         ?></a></h2>
@@ -292,15 +301,34 @@ class Content
 
         $filtersModel = Content::$_filtersModel;
         foreach ($filtersModel as $key => $value) {
-            if($value == $modelData['brand']) {
+            if ($value == $modelData['brand']) {
                 $parceLinksId = $key;
             }
         }
-
+                
+        if (file_exists('img/photo/' . $modelData['id'] . '.jpg')) {
+            $itemImage = 'img/photo/' . $modelData['id'] . '.jpg';
+        } else {
+            $itemImage = 'img/noimage.jpg';
+        }
+        
+        if (!empty($modelData['brakeTypeRear'])) {
+            foreach ($modelData as $key => $value) {
+                if ($key == 'brakeType') {
+                    $tmp['brakeTypeFront'] = $value;
+                } else {
+                    $tmp[$key] = $value;
+                }    
+            }
+            $modelData = $tmp;
+        }
+        
+        
         ?>
         <div class = "contentPage">
             <div class="driver"><a href="index.php#brand_<?php echo $parceLinksId ?>/"><?php echo $modelData['brand']?></a> -> <?php echo $modelData['model']?></div>
-            <div class="photo" ><img src="img/photo/<?php echo $photos[0]['photoId']?>.jpg" /></div>
+            
+            <div class="photo" ><img src="<?=$itemImage?>" /></div>
             <table class="tx_full">
                 <tbody>
                     <tr>

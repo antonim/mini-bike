@@ -68,12 +68,12 @@ class dataBase
         }
 
         $sql = '
-            SELECT model_properies.*, parsing_data.id AS photoId, parce_links.model as brand
+            SELECT model_properies.*, model_properies.parceLinksId AS photoId, parce_links.model as brand
             FROM model_properies
                 JOIN parce_links
                     ON model_properies.parceLinksId = parce_links.id
-                JOIN parsing_data
-                    ON parsing_data.parce_links_id = model_properies.id AND parsing_data.title = "photo"
+--                JOIN parsing_data
+--                    ON parsing_data.parce_links_id = model_properies.id AND parsing_data.title = "photo"
                 ' . $where . '
             GROUP BY model_properies.id
             ORDER BY model_properies.id DESC
@@ -86,8 +86,8 @@ class dataBase
                 FROM model_properies
                 JOIN parce_links
                     ON model_properies.parceLinksId = parce_links.id
-                JOIN parsing_data
-                    ON parsing_data.parce_links_id = model_properies.id AND parsing_data.title = "photo"
+--                JOIN parsing_data
+--                    ON parsing_data.parce_links_id = model_properies.id -- AND parsing_data.title = "photo"
                  ' . $where . '
                 GROUP BY model_properies.id
             ) AS t';
